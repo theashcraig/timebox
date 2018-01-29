@@ -1,0 +1,150 @@
+/*timebox*/
+.timebox-time-box {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    max-width: 400px;
+    background-color: #328bff;
+    cursor: default;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    color: #FFF;
+    z-index: 2000000;
+}
+.timebox-time-box-bk {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #e4edfaf0;
+    z-index: 100000;
+}
+.timebox-time-box-header {
+    font-size: 12px;
+    padding: 4px 4px;
+}
+.timebox-time-box-hour-container {
+    float: left;
+    margin: 0px;
+    padding: 5px 0px;
+    width: 100%;
+}
+.timebox-time-box-min-container {
+    float: left;
+    margin: 0px;
+    padding: 5px 0px;
+    width: 100%;
+}
+.timebox-time-box-ampm-container {
+    float: left;
+    margin: 0px;
+    padding: 5px 0px;
+    width: 100%;
+}
+.timebox-time-box-hour {
+    width: 100%;
+}
+.timebox-time-box-min {
+    width: 100%;
+}
+.timebox-time-box-ampm {
+    width: 100%;
+}
+.timebox-time-box-item {
+    float: left;
+    margin: 3px;
+    padding: 5px 0;
+    background-color: #e4f0ff3d;
+    text-align: center;
+    width: 35px;
+    cursor: pointer;
+    box-shadow: 0 0 0 1px #ffffff6e;
+}
+.timebox-time-box-ampm-item {
+    font-size: 12px;
+}
+.timebox-time-box-hour-item:hover {
+    background-color: #e4f0ff57;
+}
+.timebox-time-box-min-item:hover {
+    background-color: #e4f0ff57;
+}
+.timebox-time-box-ampm-item:hover {
+    background-color: #e4f0ff57;
+}
+.timebox-time-box-item.item-active {
+    background-color: #7bc629;
+    box-shadow: 0 0 0 1px #ffffffe0;
+}
+.timebox-time-box-item.item-active:hover {
+    filter: brightness(90%);
+}
+.timebox-time-box-save {
+    clear: both;
+    text-align: center;
+    padding: 13px 0;
+    background-color: #2764b66e;
+    font-size: 13px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.timebox-time-box-save:hover {
+    filter: brightness(90%);
+}
+.timebox-clear {
+    height: 3px;
+    clear: both;
+}
+.timebox-time-box.timebox-time-box-responsive  {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    max-width: 100%;
+    background-color: #328bff;
+    cursor: default;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    color: #FFF;
+    z-index: 2000000;
+}
+.timebox-time-box-save.timebox-time-box-responsive{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+@media screen and (max-width: 1100px) {
+
+    .timebox-time-box.timebox-time-box-responsive .timebox-time-box-item {
+        margin: 3px;
+        padding: 13px 0;
+        width: 42px;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 500px) {
+
+    .timebox-time-box-hour-item:hover {
+        background-color: inherit;
+    }
+    .timebox-time-box-min-item:hover {
+        background-color: inherit;
+    }
+    .timebox-time-box-ampm-item:hover {
+        background-color: inherit;
+    }
+    .timebox-time-box-item.item-active:hover {
+        filter: brightness(100%);
+    }
+    .timebox-time-box.timebox-time-box-responsive .timebox-time-box-item {
+        margin: 3px;
+        padding: 8px 0;
+        width: 40px;
+        font-size: 13px;
+    }
+    .timebox-time-box {
+        left: 0px!important;
+    }
+}

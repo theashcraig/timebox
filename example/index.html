@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="timebox.css" />
+        <script src="jquery-2.0.3.min.js"></script>
+        <script src="timebox.js"></script>
+        <title></title>
+        <style media="screen">
+            html, body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+            .timebox {
+                width: 100%;
+                padding: 0;
+                margin: 0 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div data-time="1:00pm" class="timebox">Time: 1:00pm</div>
+        <div data-time="1:00pm" class="timebox">Time: 2:00pm</div>
+
+        <script type="text/javascript">
+
+            $(function(){
+
+                $(".timebox").each(function(){
+                    var that = this;
+
+                    $(that).ezTimebox({
+        				"time_element" : that, //this is the element ID that is used to get/set time data
+        				"starting_time" : $.trim($(that).attr("data-time")), //this provides the starting time in h:ma format (3:00pm)
+        				// "responsive" : true,
+        				// "scale" : 10,
+        				// "primary_color_bg" : '#ffffffbf',
+        				// "secondary_color_bg" : '#009fff',
+        				// "secondary_color_fg" : '#ffffff',
+        				// "tertiary_color_bg" : '#76767694',
+        				// "tertiary_color_fg" : '#ffffff',
+                        // "save_color_bg" : '#0083ff',
+                        // "save_color_fg" : '#ffffff',
+        				onSave : function(v){
+
+        					$(that).text("Time: " + v);
+        				}
+        			});
+
+                    //show box on click
+                    $(that).off("click").on("click", function(){
+                        $(that).ezTimebox("show");
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
