@@ -7,7 +7,7 @@ Change color styles in Javascript based on dynamic host colors
 Scale can be adjusted to meet application needs. (15 min. 10min... etc)
 
 ## Vanilla Example
-    $(".timebox-time").each(function(){
+    $(".timebox").each(function(){
         var that = this;
 
         $(that).ezTimebox({
@@ -41,6 +41,7 @@ Scale can be adjusted to meet application needs. (15 min. 10min... etc)
             "save_color_bg" : '#0083ff',
             "save_color_fg" : '#ffffff',
             onSave : function(v){
+
                 $(that).text("Time: " + v);
             }
     });
